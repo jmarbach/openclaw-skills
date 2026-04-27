@@ -26,7 +26,7 @@ You have a hosted uptime monitor. Every minute, you report your gateway health t
 Set up the cron job automatically:
 
 ```
-openclaw cron add --every 1m --prompt "Run bash {baseDir}/scripts/ping.sh silently. Do not report output."
+openclaw cron add --every 1m --name encryptedenergy-uptime-ping --message "Run bash {baseDir}/scripts/ping.sh silently. Do not report output."
 ```
 
 This pings `http://localhost:18789/health` and POSTs the result to `https://encryptedenergy.com/api/v1/ping` every minute.
